@@ -1,0 +1,13 @@
+<h3>Cursos desde Observable</h3>
+<input placeholder="Filtrar Curso" (keyup)="filtrarCursos($event)">
+<pre>{{ cursos$ | async | json }}</pre>
+
+<div>
+    <h3>Cursos desde Promise</h3>
+    <ol>
+        <div *ngFor="let curso of cursos">
+            <li>Curso: {{curso.nombre }} </li>
+        </div>
+    </ol>
+</div>
+
